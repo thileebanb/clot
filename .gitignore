@@ -46,3 +46,6 @@ app.*.map.json
 
 # Pubspec.lock
 pubspec.lock
+
+# FVM Version Cache
+.fvm/
