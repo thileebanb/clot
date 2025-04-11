@@ -18,3 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 Design:
 
 - [Figma](https://www.figma.com/community/file/1233130764703685276)
+
+API:
+
+- [FakeStoreAPI](https://fakestoreapi.com)
