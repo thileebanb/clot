@@ -51,11 +51,22 @@ class _MyAppState extends State<MyApp> {
           theme: theme(themeMode),
           home: BlocBuilder<AuthBloc, AuthState>(
             builder: (context, state) {
-              return switch (state) {
-                Initial() => SplashPage(),
-                Success() => HomePage(),
-                Failure() => SignInPage(),
+              Widget page = switch (state) {
+                Initial() => const SplashPage(),
+                Success() => const HomePage(),
+                Failure() => const SignInPage(),
               };
+
+              return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (child, animation) {
+                  return FadeTransition(opacity: animation, child: child);
+                },
+                child: KeyedSubtree(
+                  key: ValueKey(state.runtimeType),
+                  child: page,
+                ),
+              );
             },
           ),
         );
