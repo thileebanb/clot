@@ -15,6 +15,8 @@ class AppTheme {
     onError: Colors.white,
     surface: Colors.grey,
     onSurface: Colors.black,
+    outline: Color(0xfff4f4f4),
+    surfaceDim: Color(0xff272727),
   );
 
   final ColorScheme _darkScheme = ColorScheme(
@@ -27,6 +29,8 @@ class AppTheme {
     onError: Colors.black,
     surface: Colors.grey,
     onSurface: Colors.white,
+    outline: Color(0xfff4f4f4),
+    surfaceDim: Color(0xff272727),
   );
 
   ThemeData call(ThemeMode mode) {

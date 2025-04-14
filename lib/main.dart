@@ -1,16 +1,16 @@
-import 'package:clot/service_locator.dart';
-import 'package:clot/src/core/blocs/auth/auth_bloc.dart';
-import 'package:clot/src/core/cubits/theme/theme_cubit.dart';
-import 'package:clot/src/core/theme/app_theme.dart';
-import 'package:clot/src/core/theme/text_theme.dart';
-import 'package:clot/src/features/auth/auth.dart';
-import 'package:clot/src/features/home/presentation/pages/home_page.dart';
+import 'package:clot/core/blocs/auth/auth_bloc.dart';
+import 'package:clot/core/cubits/theme/theme_cubit.dart';
+import 'package:clot/core/di/service_locator.dart';
+import 'package:clot/core/theme/app_theme.dart';
+import 'package:clot/core/theme/text_theme.dart';
+import 'package:clot/features/auth/auth.dart';
+import 'package:clot/features/home/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await setupDependencies();
+  await setupLocator();
 
   runApp(
     MultiBlocProvider(
