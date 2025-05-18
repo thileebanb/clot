@@ -40,7 +40,11 @@ class _SignInPageState extends State<SignInPage> {
               ),
               SizedBox(height: 16),
 
-              AppElevatedButton(onPressed: () {}, title: 'Continue'),
+              AppElevatedButton(
+                onPressed: () {},
+                title: 'Continue',
+                width: double.infinity,
+              ),
             ],
           ),
         ),
